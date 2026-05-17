@@ -1,97 +1,3 @@
-# SNOWICK MARKET SYSTEM
-
-## CORE RULE
-
-- Cafe24 centered
-- Single source management
-- No duplicated product editing
-- Stable synchronization priority
-- Marketplace separation maintained
-
----
-
-## MAIN SOURCE
-
-Cafe24 = Master product DB
-
-All marketplace data must originate from Cafe24.
-
-Direct marketplace editing prohibited.
-
----
-
-## MARKET FLOW
-
-Cafe24
-→ MarketPlus
-→ SmartStore
-→ Coupang
-→ KakaoTalk Store
-
----
-
-## SMARTSTORE RULE
-
-- SEO optimized title
-- Mobile readability priority
-- Promotion text under 50 bytes
-- Search optimized tags
-- Thumbnail optimization
-
----
-
-## COUPANG RULE
-
-- Search optimized keywords
-- Category optimization
-- Exposure focused structure
-- Duplicate keyword minimization
-
----
-
-## KAKAO RULE
-
-- Product direct editing prohibited
-- MarketPlus linkage priority
-- Single source synchronization
-- Product DB consistency maintained
-
----
-
-## PRODUCT RULE
-
-Each product must maintain:
-- Unified naming
-- Unified SEO
-- Unified pricing
-- Unified image structure
-- Unified specification
-
----
-
-## IMAGE RULE
-
-- White tone priority
-- Real product centered
-- Platform optimized thumbnail
-- Mobile optimized readability
-
----
-
-## SAFETY RULE
-
-Prohibited:
-- Direct marketplace modification
-- Duplicated uploads
-- Broken synchronization
-- Mixed product DB structure
-
----
-
-## SYSTEM GOAL
-
-Maintain unified Snowick marketplace management structure.
-
 # 스노윅 마켓 시스템
 
 ## 핵심 방향
@@ -168,14 +74,15 @@ Maintain unified Snowick marketplace management structure.
 
 ---
 
-## 금지 사항
+## 운영 절차 기준
 
-- 플랫폼 직접 수정 남발
-- 중복 상품 생성
-- 테스트 없이 전체 전송
-- 카카오 수동 수정 반복
-- 플랫폼 문장 동일 복붙
-- 구조 변경 후 즉시 대량 작업
+1. 카페24 상품 기준 작성
+2. SEO 구조 검토
+3. 마켓플러스 연동 확인
+4. 테스트 상품 전송
+5. 플랫폼 노출 확인
+6. 전체 상품 전송
+7. 수정 사항 원장 반영
 
 ---
 
@@ -192,6 +99,18 @@ Maintain unified Snowick marketplace management structure.
 
 즉시 수정 반복보다:
 원인 구조 파악을 우선한다.
+
+---
+
+## 금지 사항
+
+- 플랫폼 직접 수정 남발
+- 중복 상품 생성
+- 테스트 없이 전체 전송
+- 카카오 수동 수정 반복
+- 플랫폼 문장 동일 복붙
+- 구조 변경 후 즉시 대량 작업
+- 계정 혼합 운영
 
 ---
 
