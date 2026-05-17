@@ -1,90 +1,6 @@
-# SNOWICK DETAIL SYSTEM
-
-## CORE RULE
-
-- Conversion focused
-- Structure first
-- No unnecessary emotional copy
-- Product logic prioritized
-- Immediate readability
-
----
-
-## DETAIL FLOW
-
-1. Why Snowick
-2. Product structure
-3. Scent structure
-4. Technical structure
-5. Usage scene
-6. Purchase reason
-7. Specification
-8. Notice
-
----
-
-## BRAND RULE
-
-- Patent wick emphasized
-- Star wick emphasized
-- Tunnel zero structure
-- Meltpool structure
-- Stable flame structure
-
----
-
-## CANDLE RULE
-
-- Container optimized wick
-- Stable combustion
-- Crackling sound structure
-- Full meltpool structure
-- Long lasting burn
-
----
-
-## DIFFUSER RULE
-
-- Diffusion balance
-- Residual scent balance
-- Space optimized scent flow
-- Stable evaporation structure
-
----
-
-## PERFUME RULE
-
-- Space optimized perfume
-- Soft diffusion
-- Long residual scent
-- Fabric usable structure
-- Safety focused wording
-
----
-
-## IMAGE RULE
-
-- White tone priority
-- Real product centered
-- Structure visualization
-- No unnecessary decoration
-
----
-
-## WRITING RULE
-
-- Short paragraphs
-- Mobile readability priority
-- SEO keyword naturally inserted
-- No duplicated expressions
-
----
-
-## SYSTEM GOAL
-
-Maintain unified Snowick detail page conversion structure.
-
 # 스노윅 상세페이지 시스템
+
+---
 
 ## 핵심 방향
 
@@ -99,7 +15,7 @@ Maintain unified Snowick detail page conversion structure.
 
 ## 상세페이지 목적
 
-상세페이지는 단순 설명이 아니다.
+상세페이지는 단순 설명 문서가 아니다.
 
 사용자가:
 왜 스노윅을 선택해야 하는지
@@ -133,29 +49,30 @@ Maintain unified Snowick detail page conversion structure.
 
 ## 문장 규칙
 
-- 짧고 즉시 이해 가능해야 함
-- 감성 문장 과다 사용 금지
-- 구조 설명 우선
-- 불필요한 수식어 금지
-- 제품 논리 우선
-- 플랫폼 제한 고려
+- 짧고 즉시 이해 가능해야 한다.
+- 감성 문장 과다 사용을 금지한다.
+- 구조 설명을 우선한다.
+- 불필요한 수식어를 최소화한다.
+- 제품 논리를 우선한다.
+- 플랫폼 제한을 고려한다.
 
 ---
 
 ## 이미지 구조
 
-- 첫 화면 = 시선 정지
-- 구조 설명 이미지 우선
-- 사용 장면은 후순위
-- 제품 실물 기준 유지
-- 로고 임의 변경 금지
-- 밝은 톤 유지
+- 첫 화면은 시선 정지 역할을 수행한다.
+- 구조 설명 이미지를 우선 사용한다.
+- 사용 장면 이미지는 후순위로 배치한다.
+- 실제 제품 기준 이미지를 유지한다.
+- 로고 임의 변경을 금지한다.
+- 밝은 톤 기준을 유지한다.
 
 ---
 
 ## 제품 설명 방향
 
 제품 감성보다:
+
 - 구조
 - 안정성
 - 발향 흐름
@@ -165,30 +82,6 @@ Maintain unified Snowick detail page conversion structure.
 중심으로 설명한다.
 
 ---
-
-## 금지 사항
-
-- 과도한 감성 카피
-- 의미 없는 수식어
-- 검증 불가능 표현
-- 플랫폼 정책 위반 표현
-- 화장품 오인 문구
-- 제품과 무관한 스토리텔링
-
----
-
-## 스노윅 상세페이지 방향
-
-스노윅은:
-감성이 아니라 구조로 설득한다.
-
-사용자는:
-- 안정성
-- 구조
-- 차이점
-- 재현성
-
-을 빠르게 이해할 수 있어야 한다.
 
 ## WHY SNOWICK 구조
 
@@ -227,7 +120,10 @@ Maintain unified Snowick detail page conversion structure.
 - 터널링 0%
 - 구조 기반 발향
 - 공간 확산 안정성
-- ## 제품군별 상세 구조
+
+---
+
+## 제품군별 상세 구조
 
 ### 캔들
 
@@ -243,6 +139,7 @@ Maintain unified Snowick detail page conversion structure.
 설명 방향:
 
 감성보다:
+
 - 연소 안정성
 - 불꽃 구조
 - 공간 확산 흐름
@@ -313,6 +210,8 @@ Maintain unified Snowick detail page conversion structure.
 
 중심으로 설명한다.
 
+---
+
 ## 금지 표현 기준
 
 다음 표현은 사용을 제한하거나 검토 후 사용한다.
@@ -372,3 +271,30 @@ Maintain unified Snowick detail page conversion structure.
 - 시각 우선 배치
 
 를 유지한다.
+
+---
+
+## 금지 사항
+
+- 과도한 감성 카피
+- 의미 없는 수식어
+- 검증 불가능 표현
+- 플랫폼 정책 위반 표현
+- 화장품 오인 문구
+- 제품과 무관한 스토리텔링
+
+---
+
+## 스노윅 상세페이지 방향
+
+스노윅은:
+감성이 아니라 구조로 설득한다.
+
+사용자는:
+
+- 안정성
+- 구조
+- 차이점
+- 재현성
+
+을 빠르게 이해할 수 있어야 한다.
