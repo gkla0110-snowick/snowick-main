@@ -1,90 +1,3 @@
-# SNOWICK LABEL SYSTEM
-
-## CORE RULE
-
-- PNG priority
-- SVG master backup
-- Border removed
-- Cut line removed
-- High readability
-- Structure consistency
-
----
-
-## LABEL SIZE
-
-- 63.3mm × 45.1mm
-- 300 DPI
-- RGB mode
-- PNG final export
-
----
-
-## BRAND RULE
-
-- SNOWICK logo fixed
-- Ivory background fixed
-- Minimal structure
-- Clean layout
-- Central alignment
-
----
-
-## PRODUCT RULE
-
-Variable:
-- Product name
-- English name
-- Price
-- Origin
-- Notes
-
-Fixed:
-- Logo position
-- Bottom information
-- Typography structure
-- Layout spacing
-
----
-
-## FRAGRANCE LABEL RULE
-
-- Korean + English structure
-- Top / Middle / Base support
-- Large readable text
-- No unnecessary decoration
-
----
-
-## AROMA LABEL RULE
-
-- Essential oil structure
-- Origin visibility
-- Scientific readability
-- Clean information hierarchy
-
----
-
-## FILE RULE
-
-SVG:
-- Editable master
-
-PNG:
-- Final production output
-
----
-
-## FILE NAME RULE
-
-SNOWICK_[CATEGORY]_[PRODUCT]_LABEL.png
-
----
-
-## SYSTEM GOAL
-
-Maintain unified Snowick label production system.
-
 # 스노윅 라벨 시스템
 
 ## 핵심 방향
@@ -122,7 +35,7 @@ Maintain unified Snowick label production system.
 
 ## 고정 규격
 
-- 63.3mm × 45.1mm
+- 63.3mm × 45mm
 - 중앙 정렬 유지
 - 칼선 제거
 - 테두리 제거
@@ -171,6 +84,26 @@ SNOWICK_SIGNATURE_OIL_LABEL_WOODY_PRESTIGE.png
 
 ---
 
+## 출력 기준
+
+- 제품명만 변경 가능해야 함
+- 반복 출력 가능 구조 유지
+- 인쇄 시 왜곡 최소화
+- 모바일에서도 식별 가능해야 함
+- 구조 변경보다 내용 치환 우선
+
+---
+
+## 라벨 운영 기준
+
+- SVG는 마스터 구조 유지용
+- PNG는 실사용 출력 기준
+- 제품군별 구조 혼합 금지
+- 로고 위치 임의 변경 금지
+- 규격 변경 시 별도 검토 진행
+
+---
+
 ## 금지 사항
 
 - 로고 임의 생성
@@ -179,6 +112,7 @@ SNOWICK_SIGNATURE_OIL_LABEL_WOODY_PRESTIGE.png
 - 과도한 감성 디자인
 - SVG 구조 임의 수정
 - 제품과 무관한 이미지 사용
+- 가독성 저하 구조 사용
 
 ---
 
