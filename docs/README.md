@@ -107,6 +107,7 @@ AUTOMATION_SYSTEM.md
 - 재현성
 - 구조 일관성
 - 장기 유지 가능성
+  
 
 을 우선한다.
 
@@ -118,3 +119,4 @@ SNOWICK_GITHUB_MASTER_SYSTEM_V1 구조 기준으로 운영한다.
 
 현재 파일 구조를 유지하며,
 이후 작업은 각 SYSTEM.md 내부에 운영 규칙을 누적하는 방식으로 진행한다.
+
