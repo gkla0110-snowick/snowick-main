@@ -1,4 +1,19 @@
 # SNOWICK MASTER SYSTEM
+## Codex Operating Rules
+
+Before any task execution, read:
+
+1. AGENTS.md
+2. CODEX_RULES.md
+
+All repository changes must follow these files.
+
+Pull Request merge is not allowed.
+File deletion is not allowed.
+Platform publishing is not allowed.
+Human approval is required for business decisions.
+
+---
 
 Structure-Engineered Brand Operation System
 
