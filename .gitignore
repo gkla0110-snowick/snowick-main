@@ -1,1 +1,4 @@
 .claude/settings.json
+.env
+.env.local
+script/.env
