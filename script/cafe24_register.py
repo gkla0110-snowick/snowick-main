@@ -217,7 +217,7 @@ MATERIAL_PRODUCTS = [
         "stock_quantity": 999,
         "display":        "T",
         "selling":        "T",
-        "image_url":      "",    # 이미지 URL 입력 시 자동 등록
+        "image_url":      "https://ecimg.cafe24img.com/pg861b64307312015/snowick/web/product/big/20260623/temp_shop1_17821518032309.png",
         "promotion_phrase": "스노윅 스퀘어 블랙 퍼퓸용기 12ml 분사형 부자재",
         "seo": {
             "meta_title":       "스퀘어 블랙 퍼퓸용기 12ml 분사형 휴대용 — SNOWICK 스노윅",
