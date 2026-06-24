@@ -13,11 +13,15 @@ SNOWICK Cafe24 상품 자동 등록 스크립트
 """
 
 import os
+import sys
 import json
 import base64
 import time
 import requests
 from dotenv import load_dotenv, set_key
+
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stderr.reconfigure(encoding='utf-8')
 
 ENV_FILE = os.path.join(os.path.dirname(__file__), ".env")
 load_dotenv(ENV_FILE)
@@ -26,7 +30,7 @@ MALL_ID       = os.getenv("CAFE24_MALL_ID", "snowick")
 CLIENT_ID     = os.getenv("CAFE24_CLIENT_ID")
 CLIENT_SECRET = os.getenv("CAFE24_CLIENT_SECRET")
 BASE_URL      = f"https://{MALL_ID}.cafe24api.com/api/v2"
-API_VERSION   = "2024-03-01"
+API_VERSION   = "2026-03-01"
 
 # ──────────────────────────────────────────────
 # 스노윅 캔들 8종 상품 데이터
@@ -139,7 +143,7 @@ def refresh_access_token():
     os.environ["CAFE24_ACCESS_TOKEN"]  = token_data["access_token"]
     os.environ["CAFE24_REFRESH_TOKEN"] = token_data["refresh_token"]
 
-    print("🔄 토큰 갱신 완료")
+    print("[INFO] 토큰 갱신 완료")
     return token_data["access_token"]
 
 
@@ -160,7 +164,7 @@ def api_call(method, endpoint, payload=None, retry=True):
         return api_call(method, endpoint, payload, retry=False)
 
     if not resp.ok:
-        print(f"  ❌ API 오류 {resp.status_code}: {resp.text[:200]}")
+        print(f"  [ERROR] API 오류 {resp.status_code}: {resp.text[:200]}")
         resp.raise_for_status()
 
     return resp.json()
@@ -183,18 +187,20 @@ def register_product(product):
             "product_name": product["product_name"],
             "description": build_description(product),
             "summary_description": f"특허심지 터널링 0% 대나무 소이캔들 200g — {product['scent']}",
-            "product_tag": ",".join(tags),
+            "product_tag": tags,
+            "supply_price": "0",
+            "price": "0",
             "display": "T",     # 진열
             "selling": "T",     # 판매
             "product_weight": "300.00",
             "manufacturer_code": "M0000000",
-            "origin_place_no": 1826,    # 대한민국
+            "origin_place_code": "KR",
         }
     }
 
-    result = api_call("post", "/products", payload)
+    result = api_call("post", "/admin/products", payload)
     product_no = result["product"]["product_no"]
-    print(f"  ✅ 상품 등록 완료 — product_no: {product_no}")
+    print(f"  [OK] 상품 등록 완료 — product_no: {product_no}")
     return product_no
 
 
@@ -212,8 +218,8 @@ def upload_image(product_no, image_url):
             "small_image":       image_url,
         }
     }
-    api_call("post", f"/products/{product_no}/images", payload)
-    print(f"  🖼  이미지 등록 완료")
+    api_call("post", f"/admin/products/{product_no}/images", payload)
+    print(f"  [*]  이미지 등록 완료")
 
 
 def set_seo(product_no, product):
@@ -226,8 +232,8 @@ def set_seo(product_no, product):
             "meta_keywords":    ",".join(product["tags"][:10]),
         }
     }
-    api_call("put", f"/products/{product_no}/seo", payload)
-    print(f"  🔍 SEO 설정 완료")
+    api_call("put", f"/admin/products/{product_no}/seo", payload)
+    print(f"  [*] SEO 설정 완료")
 
 # ──────────────────────────────────────────────
 # 메인 실행
@@ -235,13 +241,13 @@ def set_seo(product_no, product):
 
 def main():
     if not CLIENT_ID or not CLIENT_SECRET:
-        print("❌ script/.env 파일에 CAFE24_CLIENT_ID / CAFE24_CLIENT_SECRET을 입력하세요.")
+        print("[ERROR] script/.env 파일에 CAFE24_CLIENT_ID / CAFE24_CLIENT_SECRET을 입력하세요.")
         return
     if not get_access_token():
-        print("❌ CAFE24_ACCESS_TOKEN이 없습니다. python cafe24_auth.py를 먼저 실행하세요.")
+        print("[ERROR] CAFE24_ACCESS_TOKEN이 없습니다. python cafe24_auth.py를 먼저 실행하세요.")
         return
 
-    print(f"\n🚀 스노윅 캔들 {len(PRODUCTS)}종 Cafe24 자동 등록 시작\n")
+    print(f"\n[RUN] 스노윅 캔들 {len(PRODUCTS)}종 Cafe24 자동 등록 시작\n")
     results = []
 
     for i, product in enumerate(PRODUCTS, 1):
@@ -252,16 +258,16 @@ def main():
             set_seo(product_no, product)
             results.append({"scent": product["scent"], "product_no": product_no, "status": "성공"})
         except Exception as e:
-            print(f"  ❌ 실패: {e}")
+            print(f"  [ERROR] 실패: {e}")
             results.append({"scent": product["scent"], "product_no": None, "status": f"실패: {e}"})
 
         time.sleep(0.5)  # API 호출 간격
 
     print("\n──────────────────────────────────────")
-    print("📋 등록 결과")
+    print("[*] 등록 결과")
     print("──────────────────────────────────────")
     for r in results:
-        icon = "✅" if r["status"] == "성공" else "❌"
+        icon = "[OK]" if r["status"] == "성공" else "[ERROR]"
         print(f"  {icon} {r['scent']:20s} | product_no: {r['product_no']} | {r['status']}")
 
     success = sum(1 for r in results if r["status"] == "성공")
